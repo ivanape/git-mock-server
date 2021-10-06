@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  gitprep:
+    build: .
+    image: programwar/gitserver
+    container_name: gitserver
+    hostname: gitserver
+    restart: always
+    ports:
+      - "0.0.0.0:5000:5000"
+    volumes:
+      - ./my-bare-repos:/opt
